@@ -5,7 +5,19 @@
     <title>Bootstrap Test</title>
     <link href="bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
     <script src="jquery-2.2.3.js" />
+    <!--
+    <script>require("jquery");</script>
+  -->
     <script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script>window.$ = window.jQuery = require("./jquery-2.2.3.js");</script>
+    <script>
+      $(document).ready(function() {
+        console.log("document loaded");
+      });
+      $(window).load(function(){
+        console.log("window loaded");
+      });
+    </script>
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -13,6 +25,9 @@
     We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+    <button type="button" calss="btn btn-default" aria-label="left-Align">
+      <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+    </button>
   </body>
 
   <script>
